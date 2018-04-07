@@ -31,6 +31,8 @@ class MusicLibraryController
         self.list_genres
       elsif user_input == "list artist"
         self.list_songs_by_artist
+      elsif user_input == "list genre"
+        self.list_songs_by_genre
        end
     end
 
