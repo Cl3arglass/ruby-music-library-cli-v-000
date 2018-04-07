@@ -86,8 +86,8 @@ class MusicLibraryController
     user_input = gets.strip
     list = self.list_songs
 
-    if user_input >= 1 && user_input <= list.length
-      puts "Playing #{list[user_input - 1].split(" - ")[1]} by #{list[user_input - 1].split(" - ")[0]}"
+    if user_input.to_i >= 1 && user_input.to_i <= list.length
+      puts "Playing #{list[user_input.to_i - 1].split(" - ")[1]} by #{list[user_input.to_i - 1].split(" - ")[0]}"
     end
 
 
