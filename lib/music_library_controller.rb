@@ -3,9 +3,9 @@ class MusicLibraryController
   attr_accessor :songs
   def initialize(path = './db/mp3s')
      @songs = MusicImporter.new(path).import
-     if gets.strip = "list songs"
-       self.list_songs
-     end
+    #  if gets.strip = "list songs"
+    #    self.list_songs
+    #  end
   end
 
   def call
