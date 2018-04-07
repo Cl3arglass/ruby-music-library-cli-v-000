@@ -90,4 +90,8 @@ class MusicLibraryController
       puts "Playing #{list[user_input.to_i - 1].split(" - ")[1]} by #{list[user_input.to_i - 1].split(" - ")[0]}"
     end
   end
+
+  if gets.strip = "list songs"
+    self.list_songs
+  end
 end
