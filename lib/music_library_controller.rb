@@ -84,13 +84,10 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     user_input = gets.strip
-    list = self.list_songs
+    list = Song.all
 
     if user_input.to_i >= 1 && user_input.to_i <= list.length
       puts "Playing #{list[user_input.to_i - 1].split(" - ")[1]} by #{list[user_input.to_i - 1].split(" - ")[0]}"
     end
-
-
-
   end
 end
