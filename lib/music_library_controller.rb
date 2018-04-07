@@ -84,7 +84,7 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     user_input = gets.strip
-    list = Song.all
+    list = @songs.sort_by { |s| s.split(" - ")[1]}
 
     if user_input.to_i >= 1 && user_input.to_i <= list.length
       puts "Playing #{list[user_input.to_i - 1].split(" - ")[1]} by #{list[user_input.to_i - 1].split(" - ")[0]}"
